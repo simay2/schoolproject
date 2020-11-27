@@ -12,10 +12,10 @@ class craps_09 {
 		int point = 0;
 		String result = " ";
 		do {
-			int dice1 = ( int ) (Math.random() * 6 ) + 1;
-			int dice2 = ( int ) (Math.random() * 6 ) + 1;
+			int dice1 = rollADice();
+			int dice2 = rollADice();
 			int sum = dice1 + dice2;
-			System.out.println("You rolled" + dice1 + " + " + dice2 + " = " + sum);
+			System.out.println("You rolled " + dice1 + " + " + dice2 + " = " + sum);
 			
 			if(point == 0) {
 				if ( sum == 2 || sum == 3 || sum ==12 ) {
@@ -26,7 +26,7 @@ class craps_09 {
 					play = false;
 				} else {
 					point = sum;
-					System.out.println("Point is" + point );
+					System.out.println("Point is " + point );
 				}
 			} else {
 				if(point == sum) {
@@ -44,4 +44,7 @@ class craps_09 {
 
 	}
 
+	public static int rollADice() {
+		return ( int ) (Math.random() * 6 ) + 1;
+	}
 }
