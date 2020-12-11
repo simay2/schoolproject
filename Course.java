@@ -1,4 +1,4 @@
-package lessons.ten.fourteen;
+package lessons.fifteen.seventeen;
 
 public class Course {
 	private String courseName;
